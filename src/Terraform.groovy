@@ -2,10 +2,10 @@ class Terraform {
     public Object context
 
     def void init(){
-        println "Initializing..."
+        return "Initializing..."
     }
     
     def void printBuildNumber() {
-        println context.env.BUILD_NUMBER
+        return context.env.BUILD_NUMBER
     }
 }
