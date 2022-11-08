@@ -11,7 +11,7 @@ def call(Map config=[:]) {
         steps {
           script {
             tfScript(terraform) {
-                echo context.env.GIT_COMMIT
+                echo this.env.GIT_COMMIT
                 def initialize = init()
                 echo initialize
                 def buildNum = printBuildNumber()
