@@ -6,6 +6,6 @@ class Terraform {
     }
     
     def void printBuildNumber() {
-        return context.env.BUILD_NUMBER
+        return env.BUILD_NUMBER
     }
 }
