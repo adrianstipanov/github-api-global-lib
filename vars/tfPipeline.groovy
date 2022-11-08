@@ -10,10 +10,11 @@ def call(Map config=[:]) {
       stage('Terraform: Init') {
         steps {
           script {
-                def initialize = init()
-                println initialize
-                def buildNum = printBuildNumber()
-                echo buildNum
+                tfScript(terraform) {
+                  def initialize = init()
+                  println initialize
+                  def buildNum = printBuildNumber()
+                  echo buildNum
             }
           }
         }
